@@ -1,0 +1,155 @@
+/* my font
+font-family: 'Poppins', sans-serif;
+font-family: 'Press Start 2P', cursive;
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h2,
+h3 {
+  font-family: "Press Start 2P", cursive;
+  color: black;
+}
+
+body {
+  background-image: url(/img/3.jpeg);
+  background-size: cover;
+  height: 100vh;
+}
+
+#app {
+  margin: 1.5rem 10%;
+  background-color: rgba(235, 231, 231, 0.5);
+  border: 0.1rem solid rgba(0, 2, 3, 0.4);
+  border-radius: 1rem;
+}
+
+.judul {
+  width: 50%;
+  font-size: 1.3rem;
+  margin: 1rem auto;
+  text-align: center;
+  line-height: 2.2rem;
+  text-shadow: 0.1rem 0.2rem rgba(255, 255, 255, 0.9);
+  color: black;
+}
+
+.computer-area {
+  padding: 1rem 5%;
+  text-align: center;
+}
+
+.computer-area h2 {
+  font-size: 1.2rem;
+  color: black;
+}
+
+.computer-area h1 {
+  font-size: 5rem;
+}
+
+.winner-area {
+  padding: 0.8rem 3%;
+  border-top: 0.2rem solid rgba(0, 2, 3, 0.3);
+  border-bottom: 0.2rem solid rgba(0, 2, 3, 0.3);
+}
+
+.player-area h2 {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.player-area .player {
+  display: flex;
+  padding: 1rem 7%;
+  justify-content: center;
+}
+
+.player-area .player .pilihan-player {
+  margin: 0 auto;
+  text-align: center;
+  padding: 2%;
+  background-color: white;
+  width: 8rem;
+  border: 0.2rem solid black;
+  border-radius: 2rem;
+  cursor: pointer;
+  flex-wrap: wrap;
+}
+
+.player-area .player .pilihan-player h1 {
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background-color: rgb(45, 41, 41);
+  width: max-content;
+  color: white;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+  margin: 0 auto 0.5rem;
+}
+
+/* media queries */
+
+/* laptop */
+@media (max-width: 1200px) {
+  html {
+    font-size: 80%;
+  }
+  .judul {
+    width: 60%;
+  }
+
+  .winner-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 3%;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 70%;
+  }
+  .judul {
+    width: 80%;
+  }
+
+  .winner-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 3%;
+  }
+}
+
+/* Hp */
+@media (max-width: 500px) {
+  html {
+    font-size: 40%;
+  }
+
+  .judul {
+    width: 70%;
+    margin: 10rem auto;
+  }
+
+  #app {
+    margin: 20rem 10%;
+  }
+
+  .winner-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10rem 3%;
+  }
+}

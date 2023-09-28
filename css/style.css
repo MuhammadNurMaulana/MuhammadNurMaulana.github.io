@@ -1,0 +1,109 @@
+/* my font
+font-family: 'Poppins', sans-serif;
+font-family: 'Press Start 2P', cursive;
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background-image: url(/img/4.jpg);
+  background-size: cover;
+  height: 100vh;
+  opacity: 0.8;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(19, 20, 20, 0.3);
+}
+
+.container .container-login {
+  width: 70%;
+  background-color: rgba(5, 5, 5, 0.3);
+  padding: 2rem 8%;
+  text-align: center;
+  color: white;
+  border-radius: 0.7rem;
+}
+
+.container .container-login h1 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: rgb(255, 255, 255);
+  text-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.5);
+  line-height: 2.2rem;
+}
+
+.container .container-login .create {
+  color: rgb(245, 242, 242);
+  font-size: 1.3rem;
+  text-shadow: 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+}
+
+.container .input-name,
+.container .input-saran {
+  font-size: 1.7rem;
+}
+
+.container textarea,
+.container input {
+  border-radius: 0.4rem;
+  text-align: center;
+}
+
+.container .btn {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  color: black;
+  width: 30%;
+}
+
+.container .btn:hover {
+  background-color: black;
+  color: white;
+}
+
+#name {
+  border-radius: 0.2rem;
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 66%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 60%;
+  }
+  .container .container-login {
+    width: 75;
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 55%;
+  }
+
+  .container .container-login input {
+    width: 50%;
+  }
+}

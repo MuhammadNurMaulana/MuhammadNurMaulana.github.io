@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Created by Maulana</title>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Press+Start+2P&display=swap" rel="stylesheet" />
+
+    <!-- My Style CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-login">
+        <h1>Selamat Datang di Game Suit Saya</h1>
+        <p class="create">&copy; Muhammad Nur Maulana 2023</p>
+
+        <form name="submit-to-google-sheet">
+          <label for="name" class="input-name">Masukkan Nama</label>
+          <br />
+          <br />
+          <input type="text" name="nama" id="name" placeholder="Masukkan Nama" />
+          <br />
+          <br />
+          <label for="pesan" class="input-saran">Masukkan Saran</label>
+          <br />
+          <br />
+          <textarea name="pesan" id="pesan" cols="20" rows="5" placeholder="Masukkan Pesan"></textarea>
+          <br />
+          <br />
+        
+          <button type="submit" class="btn">Mulai Game</button>
+        </form>
+        
+        <script>
+          const form = document.forms["submit-to-google-sheet"];
+          const btn = document.querySelector(".btn");
+
+          alert("Harap Masukkan Nama anda dan Masukkan Saran Untuk Saya")
+        
+          btn.addEventListener("click", function () {
+            // pindah halaman
+            window.location.href = "/public/main.html";
+          });
+        
+          const scriptURL =
+            "https://script.google.com/macros/s/AKfycbyDYUlgir0fiP3OvVSdB3t-7zxWZLslzw5BgllZeD69mtA6Xn7mklEI3_rZtmDatkJA/exec";
+        
+          form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            fetch(scriptURL, { method: "POST", body: new FormData(form) })
+              .then((response) => {
+                console.log("Success!", response);
+                // Pindah halaman ke sini setelah berhasil dikirimkan data
+                window.location.href = "/public/main.html";
+              })
+              .catch((error) => console.error("Error!", error.message));
+          });
+        </script>
+  </body>
+</html>
